@@ -1,33 +1,10 @@
 <div class="container">
   <div class="row">
     <div class="col-12 mt-5">
-
-      <div class="card">
-        <div class="card-header bg-primary text-white">
-          <h3 class="card-title">
-            Report issues
-          </h3>
-        </div>
-        <div class="card-body">
-          
-          <form (ngSubmit)="onSubmit()" #form>
-            <app-control label="issue">
-              <input class="form-control" type="text" #input>
-            </app-control>
-            <app-control label="description">
-              <textarea #input class="form-control" rows="5"></textarea>
-            </app-control>
-            <button appButton type="submit" class="btn btn-primary">
-              Submit
-              <span ngProjectAs="icon">
-                <i class="bi bi-arrow-right"></i>
-              </span>  
-            </button>
-          </form>
-
-        </div>
-      </div>
-
+      <app-server-status />
+    </div>
+    <div class="col-12 mt-3">
+      <app-tickets />
     </div>
   </div>
 </div>

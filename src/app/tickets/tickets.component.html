@@ -1,0 +1,27 @@
+<article>
+  <h3>Create a new ticket</h3>
+  <div class="card">
+    <div class="card-header bg-primary text-white">
+      <h3 class="card-title">
+        Report issues
+      </h3>
+    </div>
+    <div class="card-body">
+      <app-new-ticket (add)="onAdd($event)" />
+    </div>
+  </div>
+</article>
+
+<article class="mt-3">
+  <h3>Ticket list</h3>
+  <div class="list-group">
+
+    @for(ticket of tickets; track ticket.id) {
+      <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+        <app-ticket [ticket]="ticket" />
+      </a>
+    }
+
+  </div>
+</article>
+

@@ -1,0 +1,15 @@
+<h3 class="d-inline">Server Status: </h3>
+<span [class]="{
+  'fs-5': true,
+  'text-bg-success': status() === 'online',
+  'text-bg-danger': status() === 'offline',
+  'text-bg-warning': status() === 'unknown',
+  'badge': true
+}">{{ status() }}</span>
+@if(status() === 'online') {
+  <p>All system are operational.</p>
+} @else if (status() === 'offline') {
+  <p>Functionality should be restored soon.</p>
+} @else if(status() === 'unknown') {
+  <p>Fectcher server status failed.</p> 
+}

@@ -17,9 +17,9 @@ export class ControlComponent {
 
   private input = contentChild<ElementRef<HTMLInputElement | HTMLTextAreaElement>>('input');
 
-  onClick() {
-    console.log(this.input()?.nativeElement)
-    console.log(this.el.nativeElement)
-  }
+  // onClick() {
+  //   // console.log(this.input()?.nativeElement)
+  //   // console.log(this.el.nativeElement)
+  // }
 
 }
